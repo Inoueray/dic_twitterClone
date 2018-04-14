@@ -1,0 +1,116 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* 共通 ======================================= */
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: "Hiragino Kaku Gothic ProN";
+	height: 100%;
+}
+
+
+
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+.container {
+	width: 100%;
+	min-height: 100%;
+	padding: 0;
+	margin: 0 auto;
+}
+
+/* header ======================================= */
+
+header {
+	width: 100%;
+	height: 75px;
+	background-color: #04B486;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;	
+	text-decoration: none;
+}
+
+.header-menus li {
+	float: left;
+	margin: 10px;
+	font-size: 2.0rem;
+	height: 75px;
+	color: #FFFFFF;
+	display: inline-block;
+}
+
+.header-menus li a {
+	text-decoration: none;
+}
+
+.header-menus li  :visited {
+	color: white;
+}
+
+.header-menus li a:hover {
+	opacity: 0.5;
+}
+
+/* top ======================================= */
+
+.top-main {
+	with: 100%;
+	padding-top: 100px;
+	background-size: cover;
+    background-image: url("/top.png");
+    background-position: center center;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.top-message {
+	text-align: center;
+	height: 100%;
+	color: #F7819F;
+}
+
+.top-message h2 {
+	font-size: 10rem;
+}
+
+.top-message p {
+	font-size: 5rem;
+}
+
+
+
+/* contents-main ======================================= */
+
+.contents-main {
+	padding-bottom: 60px;
+	min-height: 100%;
+}
+
+/* footer ======================================= */
+
+
+footer {
+	width: 100%;
+	height: 30px;
+	background-color: #424242;
+	text-align: center;
+	color: white;
+	font-size: 0.5rem;
+	position: absolute;
+	bottom: 0
+}
+
+footer p {
+	line-height: 30px;
+}

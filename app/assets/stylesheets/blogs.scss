@@ -1,0 +1,80 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* blogs/index ============================ */
+
+.main {
+	padding-top: 30px;
+	padding-bottom: 60px;
+}
+
+.main h2 {
+	padding: 20px 0px;
+	text-align: center;
+	color: #6E6E6E;
+}
+
+.posts-index-notice {
+	color: #F7819F;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.posts-index-item {
+  padding: 20px 30px;
+  background-color: #FAFAFA;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.posts-index-item p {
+	color: #610B0B;
+	font-size: 2rem;
+}
+
+.posts-index-menus {
+	float: right;
+}
+
+.posts-index-menus a {
+	color: #848484;
+	text-decoration: none;
+}
+
+.posts-index-menus a:hover {
+	color: #04B486;
+}
+
+/* blogs/form ============================ */
+
+.form-main {
+  padding: 20px 30px;
+  background-color: #FAFAFA;
+  overflow: hidden;
+  box-shadow: 0 2px 6px #c1ced7;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.form-content {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.form-submit {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* blogs/confirm ============================ */
+
+.confirm-content {
+	margin: 0 auto;
+	text-align: center;
+}
+
