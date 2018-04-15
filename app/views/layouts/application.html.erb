@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SHOUT!</title>
+    <title>SHOUT!〜想いを叫べば、何かが変わるかも。〜</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,12 +10,12 @@
   <body>
     <div class="wrapper">
     	<header>
-        <div class="container">
-          <nav>
-        		<ul class="header-menus">
-        			<li><%= link_to "TOP", '/' %></li>
-        			<li><%= link_to "SHOUT!一覧", blogs_path %></li>
-        			<li><%= link_to "SHOUT!する", new_blog_path %></li>
+        <div class="container-fluid">
+          <nav class="header-menus">
+        		<ul class="row">
+        			<li class="col-sm-4 col-xs-12"><%= link_to "TOP", '/' %></li>
+        			<li class="col-sm-4 col-xs-12"><%= link_to "SHOUT!一覧", blogs_path %></li>
+        			<li class="col-sm-4 col-xs-12"><%= link_to "SHOUT!する", new_blog_path %></li>
         		</ul>
           </nav>
         </div>
