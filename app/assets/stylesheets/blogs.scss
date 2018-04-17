@@ -26,8 +26,19 @@
   background-color: #FAFAFA;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
-  width: 600px;
+  width: 90%;
   margin: 0 auto;
+}
+
+@media screen and (min-width:768px) {
+  .posts-index-item {
+    padding: 20px 30px;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+    width: 600px;
+    margin: 0 auto;
+  }
 }
 
 .posts-index-item p {
@@ -61,14 +72,30 @@
   background-color: #FAFAFA;
   overflow: hidden;
   box-shadow: 0 2px 6px #c1ced7;
-  width: 600px;
+  width: 80%;
   margin: 0 auto;
 }
+
+@media screen and (min-width:768px) {
+  .form-main {
+    padding: 20px 30px;
+    background-color: #FAFAFA;
+    overflow: hidden;
+    box-shadow: 0 2px 6px #c1ced7;
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
 
 .form-content {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	text-align: center;
+}
+
+.form-content input {
+  width: 80%;
 }
 
 .form-submit {
