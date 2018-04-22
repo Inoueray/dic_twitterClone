@@ -57,7 +57,6 @@ li {
 	padding: 0;
 	color: #FFFFFF;
 	display: block;
-	border: solid 0.1px #f4fffc;
 }
 
 .header-menus li a {
@@ -82,10 +81,22 @@ li {
 	with: 100%;
 	padding-top: 100px;
 	background-size: cover;
-    background-image: url("/top.png");
-    background-position: center center;
+  background-image: url("/top_sp.png");
+  background-position: center center;
 	background-repeat: no-repeat;
 	height: 600px;
+}
+
+@media screen and (min-width:768px) {
+	.top-main {
+		with: 100%;
+		padding-top: 100px;
+		background-size: cover;
+	  background-image: url("/top.png");
+	  background-position: center center;
+		background-repeat: no-repeat;
+		height: 600px;
+	}
 }
 
 .top-message {

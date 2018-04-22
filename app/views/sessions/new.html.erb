@@ -1,0 +1,18 @@
+<div class="main">
+  <h2>Log in</h2>
+  <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+  <div class="login-menus">
+    <ul>
+      <li><%= f.label :email %></li>
+      <li><%= f.email_field :email %></li>
+    </ul>
+    <ul>
+      <li><%= f.label :password %></li>
+      <li><%= f.password_field :password %></li>
+    </ul>
+    <div class="login-submit">
+      <p><%= f.submit("Log in", :class => "btn btn-default") %></p>
+    </div> 
+    <% end %>
+  </div>
+</div>
