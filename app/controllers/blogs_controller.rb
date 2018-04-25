@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_check, only: [:new, :edit, :show]
 
   def index
@@ -16,6 +16,7 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.create(blog_params)
+    @blog.user_id = current_user.id
     if @blog.save
       redirect_to blogs_path, notice: "投稿完了！"
     else
@@ -23,12 +24,14 @@ class BlogsController < ApplicationController
     end
   end
 
+  def show
+    @favorite = current_user.favorites.find_by(blog_id: @blog.id)
+  end
+
   def edit
-    @blog = Blog.find(params[:id])
   end
 
   def update
-    @blog = Blog.find(params[:id])
     if @blog.update(blog_params)
       redirect_to blogs_path, notice: "投稿を編集したよ！"
     else
@@ -46,6 +49,7 @@ class BlogsController < ApplicationController
   end
 
 private
+
   def blog_params
     params.require(:blog).permit(:content)
   end
