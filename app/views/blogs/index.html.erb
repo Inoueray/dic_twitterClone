@@ -2,6 +2,7 @@
   <h2>SHOUT!</h2>
   <% @blogs.each do |blog| %>
     <div class="posts-index-item">
+        <p class="user-name"><%= blog.user.name %></p>
 	  	  <p><%= blog.content %></p>
   	  <div class="posts-index-menus">
         <%= link_to "詳細", blog_path(blog.id) %>

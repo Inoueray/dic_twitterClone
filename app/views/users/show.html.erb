@@ -7,7 +7,8 @@
     <h3>お気に入りのSHOUT!</h3>
     <% @favorite_blogs.each do |favorite_blog| %>
       <div class="posts-index-item">
-      <p><%= favorite_blog.content %></p>
+        <p class="user-name"><%= favorite_blog.user.name %></p>
+        <p><%= favorite_blog.content %></p>
       <div class="posts-index-menus">
         <%= link_to "詳細", blog_path(favorite_blog.id) %>
       </div>

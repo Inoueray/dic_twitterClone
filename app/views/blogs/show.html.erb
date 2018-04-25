@@ -1,7 +1,10 @@
 <div class="main">
   <h2>投稿</h2>
   <div class="content-details">
-  <p><%= @blog.content %></p>
+    <div class="posts-index-item">
+      <p class="user-name"><%= @blog.user.name %></p>
+      <p><%= @blog.content %></p>
+    </div>
     <div class="fav-btn">
       <% unless @blog.user == current_user %>
         <% if @favorite.present? %>
