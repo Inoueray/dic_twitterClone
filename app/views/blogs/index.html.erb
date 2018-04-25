@@ -4,8 +4,11 @@
     <div class="posts-index-item">
 	  	  <p><%= blog.content %></p>
   	  <div class="posts-index-menus">
-  	  	<%= link_to "編集", edit_blog_path(blog.id) %>
-  	  	<%= link_to "削除", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除しますか？'} %>		
+        <%= link_to "詳細", blog_path(blog.id) %>
+        <% if blog.user == current_user %>
+    	  	<%= link_to "編集", edit_blog_path(blog.id) %>
+    	  	<%= link_to "削除", blog_path(blog.id), method: :delete, data: { confirm: '本当に削除しますか？'} %>
+          <% end %>
   	  </div>
     </div>
   <% end %>

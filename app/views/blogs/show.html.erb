@@ -1,12 +1,18 @@
 <div class="main">
   <h2>投稿</h2>
+  <div class="content-details">
   <p><%= @blog.content %></p>
-  <p><%= link_to '一覧に戻る', blogs_path %></p>
-  <% unless @blog.user == current_user %>
-    <% if @favorite.present? %>
-      <%= link_to 'お気に入り解除する', favorite_path(blog_id: @blog.id), method: :delete, class: 'btn btn-danger' %>
-    <% else %>
-      <%= link_to 'お気に入りする', favorites_path(blog_id: @blog.id), method: :post, class: 'btn btn-primary' %>
-    <% end %>
-<% end %>
+    <div class="fav-btn">
+      <% unless @blog.user == current_user %>
+        <% if @favorite.present? %>
+          <%= link_to 'お気に入り解除する', favorite_path(blog_id: @blog.id), method: :delete, class: 'btn btn-danger' %>
+        <% else %>
+          <%= link_to 'お気に入りする', favorites_path(blog_id: @blog.id), method: :post, class: 'btn btn-primary' %>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="link-to-index">
+      <p><%= link_to '一覧に戻る', blogs_path %></p>
+    </div>
+  </div>
 </div>
