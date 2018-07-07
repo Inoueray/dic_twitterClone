@@ -11,7 +11,8 @@
 <%= form_with(model: @blog, url: choose_new_or_edit, local: true) do |form| %>
 <div class="form-main"> 
   <div class="form-content">
-  	<%= form.text_field :content, size: "50" %>
+    <%= form.text_field :content, size: "50" %>
+    <%= form.file_field :image %>
   </div>
   <div class="form-submit">
     <%= form.submit("SHOUT!", :class => "btn btn-default") %>

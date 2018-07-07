@@ -4,6 +4,7 @@
     <div class="posts-index-item">
       <p class="user-name"><%= @blog.user.name %></p>
       <p><%= @blog.content %></p>
+      <p><%= image_tag @blog.image %></p>
     </div>
     <div class="fav-btn">
       <% unless @blog.user == current_user %>

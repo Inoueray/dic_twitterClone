@@ -2,9 +2,11 @@
   <h2>この内容で投稿する</h2>
   <%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
+  <%= form.hidden_field :image %>
     <div class="confirm-content">
 	    <h4>SHOUT!の内容</h4>
 	    <p><%= @blog.content %></p>
+      <p><%= image_tag @blog.image %></p>
 
       <div class="form-menus">
         <p>
