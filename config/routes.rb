@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
   get "/" ,to: "home#top"
 
-  resources :users, only: [:new, :create, :show]
+  resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :favorites, only: [:create, :destroy]
 

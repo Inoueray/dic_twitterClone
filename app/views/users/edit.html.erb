@@ -1,0 +1,42 @@
+<div class="main">
+  <h2>プロフィール編集</h2>
+  <% if @user.errors.any? %>
+    <div class="error_explanation">
+      <p><%= pluralize(@user.errors.count, "error") %></p>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="sign-up">
+    <%= form_with(model: @user, local: true) do |f| %>
+    <ul>
+      <li><%= f.label :name %></li>
+      <li><%= f.text_field :name %></li>
+    </ul>
+    <ul>
+      <li><%= f.label :email %></li>
+      <li><%= f.email_field :email %></li>
+    </ul>
+    <ul>
+      <div class="file-field">
+        <li><%= f.label :image %></li>
+        <li><%= f.file_field :image %></li>
+      </div>
+    </ul>
+    <ul>
+      <li><%= f.label :password %></li>
+      <li><%= f.password_field :password %></li>
+    </ul>
+    <ul>
+      <li><%= f.label :password_confirmation %></li>
+      <li><%= f.password_field :password_confirmation %></li>
+    </ul>
+    <div class="sign-up-submit">
+      <p><%= f.submit( "Update my account", :class => "btn btn-default") %></p>
+    </div>
+    <% end %>
+  </div>
+</div>

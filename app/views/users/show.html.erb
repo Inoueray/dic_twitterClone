@@ -1,7 +1,15 @@
 <div class="main">
   <h2><%= @user.name %>のページ</h2>
   <div class="user-info">
-    <p>メールアドレス: <%= @user.email %></p>
+    <div class="user-image">
+      <%= image_tag @user.image %>    
+    </div>
+    <div>
+      <p>メールアドレス: <%= @user.email %></p>
+    </div>
+    <div>
+      <%= link_to "プロフィールを編集", edit_user_path(@user.id) %>
+    </div>
   </div>
   <div class="user-favorites">
     <h3>お気に入りのSHOUT!</h3>
